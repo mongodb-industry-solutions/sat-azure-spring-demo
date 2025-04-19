@@ -1,5 +1,10 @@
 # Getting Started
 
+### CLI 
+- Installing Dependencies: ```mvn dependency:resolve```
+- Starting the Embedded Web Server: ```mvn spring-boot:run```
+- Running Tests: ```mvn test```
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
@@ -12,6 +17,8 @@ For further reference, please consider the following sections:
 ### Guides
 The following guides illustrate how to use some features concretely:
 
+* [MongoDB Java Driver](https://www.mongodb.com/docs/drivers/java/sync/current/)
+* [Get Started with the Java Driver](https://www.mongodb.com/docs/drivers/java/sync/current/get-started/#std-label-java-get-started)
 * [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
