@@ -5,6 +5,14 @@
 - Starting the Embedded Web Server: ```mvn spring-boot:run```
 - Running Tests: ```mvn test```
 
+### Endpoints 
+- OPTIONS http://localhost:3000
+- GET http://localhost:3000/api/users
+- POST http://localhost:3000/api/users
+- GET http://localhost:3000/api/users/:id
+- PUT http://localhost:3000/api/users/:id
+- DELETE http://localhost:3000/api/users/:id
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
