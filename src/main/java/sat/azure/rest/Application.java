@@ -17,13 +17,18 @@ import com.mongodb.client.MongoClients;
 
 @SpringBootApplication
 public class Application {
+
     @Autowired
     private Environment environment;
 
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
-        System.setProperty("MONGO_URI", dotenv.get("MONGO_URI"));
-        System.setProperty("MONGO_DBNAME", dotenv.get("MONGO_DBNAME"));
+        Dotenv env = Dotenv.load();
+        String mongoUri = env.get("MONGODBATLAS_CLUSTER_CONNECTIONSTRING") != null && !env.get("MONGODBATLAS_CLUSTER_CONNECTIONSTRING").isEmpty()
+                ? env.get("MONGODBATLAS_CLUSTER_CONNECTIONSTRING")
+                : env.get("MONGO_URI");
+        System.setProperty("MONGO_URI", mongoUri);
+        System.setProperty("MONGO_DBNAME", env.get("MONGO_DBNAME"));
+
         SpringApplication.run(Application.class, args);
     }
 
